@@ -4,6 +4,10 @@ import { fetchNews } from "@/lib/fetchNews";
 import { summarize } from "@/lib/summarize";
 import { sendEmail } from "@/lib/sendEmail";
 
+console.log("SUPABASE_URL:", process.env.SUPABASE_URL);
+console.log("SUPABASE_SERVICE_ROLE_KEY:", process.env.SUPABASE_SERVICE_ROLE_KEY ? "exists" : "missing");
+
+
 export async function GET() {
   try {
     // 1. Get subscribers
